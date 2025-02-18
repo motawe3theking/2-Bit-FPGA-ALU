@@ -1,0 +1,30 @@
+|MUX
+and_out[0] => Mux1.IN3
+and_out[1] => Mux0.IN3
+or_out[0] => Mux1.IN4
+or_out[1] => Mux0.IN4
+xor_out[0] => Mux1.IN2
+xor_out[1] => Mux0.IN2
+adder_out[0] => Mux1.IN5
+adder_out[1] => Mux0.IN5
+sub_out[0] => Mux1.IN6
+sub_out[1] => Mux0.IN6
+mult[0] => Mux1.IN7
+mult[1] => Mux0.IN7
+mult[2] => out.DATAB
+mult[3] => out.DATAB
+sel[0] => Decoder0.IN2
+sel[0] => Mux0.IN10
+sel[0] => Mux1.IN10
+sel[1] => Decoder0.IN1
+sel[1] => Mux0.IN9
+sel[1] => Mux1.IN9
+sel[2] => Decoder0.IN0
+sel[2] => Mux0.IN8
+sel[2] => Mux1.IN8
+out[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,11 @@
+I/O Assignment Analysis Status : Successful - Sat Dec 07 16:57:33 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : TopALU
+Top-level Entity Name : TopALU
+Family : Cyclone V
+Device : 5CEBA2F17C8
+Timing Models : Final
+Total pins : 11 / 128 ( 9 % )
+Total virtual pins : 0
+Total PLLs : 0 / 4 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

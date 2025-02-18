@@ -1,0 +1,230 @@
+|TopALU
+A[0] => A[0].IN6
+A[1] => A[1].IN6
+B[0] => B[0].IN6
+B[1] => B[1].IN6
+select[0] => select[0].IN1
+select[1] => select[1].IN1
+select[2] => select[2].IN1
+ALU_Out[0] <= MUX:mux.port7
+ALU_Out[1] <= MUX:mux.port7
+ALU_Out[2] <= MUX:mux.port7
+ALU_Out[3] <= MUX:mux.port7
+
+
+|TopALU|bit2_and:and_gate
+A[0] => out.IN0
+A[1] => out.IN0
+B[0] => out.IN1
+B[1] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|bit2_or:or_gate
+A[0] => out.IN0
+A[1] => out.IN0
+B[0] => out.IN1
+B[1] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|bit2_xor:xor_gate
+A[0] => out.IN0
+A[1] => out.IN0
+B[0] => out.IN1
+B[1] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fulladder:adder
+a0 => a0.IN1
+a1 => a1.IN1
+b0 => b0.IN1
+b1 => b1.IN1
+cin => cin.IN1
+cout <= onebitfulladder:f2.port4
+sum0 <= onebitfulladder:f1.port3
+sum1 <= onebitfulladder:f2.port3
+
+
+|TopALU|Fulladder:adder|onebitfulladder:f1
+x => x.IN1
+y => y.IN1
+z => z.IN1
+s <= halfadder:h2.port3
+c <= g1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fulladder:adder|onebitfulladder:f1|halfadder:h1
+A => sumgate.IN0
+A => carrygate.IN0
+B => sumgate.IN1
+B => carrygate.IN1
+carry <= carrygate.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sumgate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fulladder:adder|onebitfulladder:f1|halfadder:h2
+A => sumgate.IN0
+A => carrygate.IN0
+B => sumgate.IN1
+B => carrygate.IN1
+carry <= carrygate.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sumgate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fulladder:adder|onebitfulladder:f2
+x => x.IN1
+y => y.IN1
+z => z.IN1
+s <= halfadder:h2.port3
+c <= g1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fulladder:adder|onebitfulladder:f2|halfadder:h1
+A => sumgate.IN0
+A => carrygate.IN0
+B => sumgate.IN1
+B => carrygate.IN1
+carry <= carrygate.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sumgate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fulladder:adder|onebitfulladder:f2|halfadder:h2
+A => sumgate.IN0
+A => carrygate.IN0
+B => sumgate.IN1
+B => carrygate.IN1
+carry <= carrygate.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sumgate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fullsubtractor:subtractor
+a0 => a0.IN1
+a1 => a1.IN1
+b0 => b0.IN1
+b1 => b1.IN1
+bin => bin.IN1
+bout <= onebitfullsub:o2.port4
+diff0 <= onebitfullsub:o1.port3
+diff1 <= onebitfullsub:o2.port3
+
+
+|TopALU|Fullsubtractor:subtractor|onebitfullsub:o1
+x => x.IN1
+y => y.IN1
+bin => bin.IN1
+diff <= halfsub:h2.port2
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fullsubtractor:subtractor|onebitfullsub:o1|halfsub:h1
+a => diff.IN0
+a => bout.IN0
+b => diff.IN1
+b => bout.IN1
+diff <= diff.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fullsubtractor:subtractor|onebitfullsub:o1|halfsub:h2
+a => diff.IN0
+a => bout.IN0
+b => diff.IN1
+b => bout.IN1
+diff <= diff.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fullsubtractor:subtractor|onebitfullsub:o2
+x => x.IN1
+y => y.IN1
+bin => bin.IN1
+diff <= halfsub:h2.port2
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fullsubtractor:subtractor|onebitfullsub:o2|halfsub:h1
+a => diff.IN0
+a => bout.IN0
+b => diff.IN1
+b => bout.IN1
+diff <= diff.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|Fullsubtractor:subtractor|onebitfullsub:o2|halfsub:h2
+a => diff.IN0
+a => bout.IN0
+b => diff.IN1
+b => bout.IN1
+diff <= diff.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|multiplier:multiplier
+a[0] => m.IN0
+a[0] => y.IN0
+a[1] => x.IN0
+a[1] => x.IN0
+b[0] => m.IN1
+b[0] => x.IN1
+b[1] => x.IN1
+b[1] => y.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= HA:HA1.port2
+m[2] <= HA:HA2.port2
+m[3] <= HA:HA2.port3
+
+
+|TopALU|multiplier:multiplier|HA:HA1
+a => G1.IN0
+a => G2.IN0
+b => G1.IN1
+b => G2.IN1
+s <= G1.DB_MAX_OUTPUT_PORT_TYPE
+c <= G2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|multiplier:multiplier|HA:HA2
+a => G1.IN0
+a => G2.IN0
+b => G1.IN1
+b => G2.IN1
+s <= G1.DB_MAX_OUTPUT_PORT_TYPE
+c <= G2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopALU|MUX:mux
+and_out[0] => Mux1.IN3
+and_out[1] => Mux0.IN3
+or_out[0] => Mux1.IN4
+or_out[1] => Mux0.IN4
+xor_out[0] => Mux1.IN2
+xor_out[1] => Mux0.IN2
+adder_out[0] => Mux1.IN5
+adder_out[1] => Mux0.IN5
+sub_out[0] => Mux1.IN6
+sub_out[1] => Mux0.IN6
+mult[0] => Mux1.IN7
+mult[1] => Mux0.IN7
+mult[2] => out.DATAB
+mult[3] => out.DATAB
+sel[0] => Decoder0.IN2
+sel[0] => Mux0.IN10
+sel[0] => Mux1.IN10
+sel[1] => Decoder0.IN1
+sel[1] => Mux0.IN9
+sel[1] => Mux1.IN9
+sel[2] => Decoder0.IN0
+sel[2] => Mux0.IN8
+sel[2] => Mux1.IN8
+out[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

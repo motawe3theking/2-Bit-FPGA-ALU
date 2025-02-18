@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "xor_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "or_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "and_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mult[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sub_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "or_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "xor_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "and_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "adder_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mult[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sub_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mult[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mult[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
