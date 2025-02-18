@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Acer/Desktop/GIU/Semester 5/Embedded Systems/TOPALU/simulation/qsim
+vTopALU
+Z1 !s110 1733218663
+!i10b 1
+!s100 Z;[?Bl5fImY8zZY<RZAz?3
+IB_XkP5N0ZXnk_l6k<lPI]3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1733218661
+8TopALU.vo
+FTopALU.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1733218663.000000
+!s107 TopALU.vo|
+!s90 -work|work|TopALU.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@top@a@l@u
+vTopALU_vlg_vec_tst
+R1
+!i10b 1
+!s100 DT^k0o3f=718@_3CoBFF52
+IGEa`>@B9GNl3[n;Hcb9`:1
+R2
+R0
+w1733218659
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@top@a@l@u_vlg_vec_tst
