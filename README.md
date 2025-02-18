@@ -1,7 +1,7 @@
 # 2-Bit FPGA Arithmetic Logic Unit (ALU)
 
 ## Overview
-This project implements a 2-bit Arithmetic Logic Unit (ALU) using Verilog HDL. The ALU performs basic arithmetic and logical operations, including addition, subtraction, multiplication, AND, OR, and XOR. It is designed to be synthesized on **Cyclone IV FPGA** or any compatible FPGA board.
+This project implements a 2-bit Arithmetic Logic Unit (ALU) using Verilog HDL. The ALU performs basic arithmetic and logical operations, including addition, subtraction, multiplication, AND, OR, and XOR. It is designed to be synthesized on **Cyclone V FPGA** or any compatible FPGA board.
 
 ## Features
 - **2-bit Operations:** Supports the following operations:
@@ -16,7 +16,7 @@ This project implements a 2-bit Arithmetic Logic Unit (ALU) using Verilog HDL. T
 
 ## Technology Stack
 - **Hardware Description Language:** Verilog HDL
-- **FPGA Platform:** Cyclone IV FPGA or any compatible FPGA board
+- **FPGA Platform:** Cyclone V FPGA or any compatible FPGA board
 - **Development Environment:** Quartus Prime Software
 
 
